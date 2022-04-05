@@ -1,0 +1,53 @@
+﻿<Window x:Class="ATV01.Janelas.JanelaCadastro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATV01.Janelas"
+        mc:Ignorable="d"
+        Title="Cadastro" Height="502" Width="786" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Imagens/Algodão doce.png" />
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Cadastro" FontSize="26" Margin="0 20" HorizontalAlignment="Center" FontFamily="Impact"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin='20 0'>
+                <Label Content="Dados pessoais" FontSize="22" FontFamily="Impact"/>
+                <Label Content="Nome" FontFamily="Impact"/>
+                <TextBox x:Name="txtNome" Padding="6"/>
+                <Label Content="Data Nascimento" FontFamily="Impact"/>
+                <DatePicker x:Name="dataNascimento"/>
+                <Label Content="CPF" FontFamily="Impact"/>
+                <TextBox x:Name="txtCPF" Padding="6"/>
+                <Label Content="RG" FontFamily="Impact"/>
+                <TextBox x:Name="txtRG" Padding="6"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="0,0,22,0">
+                <Label Content="Dados de Endereço" FontSize="22" FontFamily="Impact"/>
+                <Label Content="Nome da rua" FontFamily="Impact"/>
+                <TextBox x:Name="txtRua" Padding="6"/>
+                <Label Content="Bairro" FontFamily="Impact"/>
+                <TextBox x:Name="txtBairro" Padding="6"/>
+                <Label Content="Número da Casa" FontFamily="Impact"/>
+                <TextBox x:Name="txtNumCasa" Padding="6"/>
+                <Label Content="Complemento" FontFamily="Impact"/>
+                <TextBox x:Name="txtCompl" Padding="6"/>
+            </StackPanel>
+        </Grid>
+        <Button x:Name="btClose" Content="X" HorizontalAlignment="Left" Margin="757,0,0,0" VerticalAlignment="Top" Width="29" Click="btClose_Click" BorderBrush="White" Background="White" FontFamily="Impact" FontSize="14" Foreground="Red"/>
+    </Grid>
+
+</Window>
+
+    
